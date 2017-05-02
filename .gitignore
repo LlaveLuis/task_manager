@@ -5,3 +5,6 @@ __pycache__/
 
 # files to support PyCharm operation
 .idea
+
+# file created by Dolphin file manager
+.directory
