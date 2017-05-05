@@ -1,25 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 from django.shortcuts import render, redirect
-from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
 from django.contrib import messages
 
 from user.models import User
 from .forms import LoginForm
+from .decorators import logged
 
 
-def access(request):
+@logged
+def access(request, id_user=None):
     """View to process authentication user."""
-    # verify if an open session exists
-    id_server = request.session.session_key
-    if id_server is not None:
-        id_client = request.COOKIES['sessionid']
-        id_user = request.session.get('id_user')
-        if id_client == id_server and id_user:
-            res = User.registry_user(id_user)
-            if res['name']:
-                return redirect('info')
+    # if an open session exists
+    if id_user:
+        res = User.registry_user(id_user)
+        if res['name']:
+            return redirect('info')
     # from POST, data verification is required
     if request.POST:
         form = LoginForm(request.POST)
