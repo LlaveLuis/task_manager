@@ -9,3 +9,5 @@ div.navbar-header a { color: white; }
 div.navbar-header a:hover { color: black; }
 ul.nav a { color: white; }
 ul.nav a:hover { color: black; }
+div#div_msg { height: 30px; }
+div#div_msgs { padding: 4px; }

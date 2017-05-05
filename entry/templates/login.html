@@ -18,7 +18,7 @@
                Task Manager</span>
          </a>
       </div>
-      <div>
+      <div id="div_menu">
          <ul class="nav navbar-nav">
             <li class="active"><a href="#main">Main</a></li>
             <li><a href="#solutions">Solutions</a></li>
@@ -37,7 +37,7 @@
                <label class="sr-only" for="passwd">Password:</label>
                <input type="password" class="form-control"
                       id="passwd" name="passwd" placeholder="Password">
-               {{ form.passwd }}
+               {{ form.passw }}
             </div>
             <div class="checkbox">
                <input class="form-control" type="checkbox" name="remember" id="remember">
@@ -56,6 +56,18 @@
                </a>
             </li>
          </ul>
+         <div id="div_msg" class='navbar-xs navbar-text navbar-right'>
+            {% if messages %}
+            <div id="div_msgs" class="alert
+               {% if request.session.res == 'Err' %} alert-danger
+               {% elif request.session.res == 'Warn' %} alert-warning
+               {% else %} alert-success {% endif %}">
+               {% for message in messages %}
+                  {{ message }}
+               {% endfor %}
+            </div>
+            {% endif %}
+         </div>
       </div>
    </nav>
    <div class="modal fade" id="mymod" role="dialog">
@@ -87,20 +99,6 @@
    </div>
    <div class="section" id="main">
       <div class='container'>
-         <div class='row'>
-            <div class='col-md-4 col-md-push-4'>
-               {% if messages %}
-               <div class="alert
-                        {% if request.session.res == 'Err' %} alert-danger
-                        {% elif request.session.res == 'Warn' %} alert-warning
-                        {% else %} alert-success {% endif %}">
-                  {% for message in messages %}
-                     {{ message }}
-                  {% endfor %}
-               </div>
-               {% endif %}
-            </div>
-         </div>
          <div class="row">
             <div class="col-xs-12 text-center">
                <h1>Welcome to Task Manager App</h1>
