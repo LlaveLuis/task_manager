@@ -9,7 +9,9 @@ heroku.com, an Apache web server of its own and a Nginx web server of its own, r
 
 Characteristics:
 ----------------
-(Pending to write here)
+- Presentation page with sections, which can be navigated by header menu.
+- Login form in header, with Remember me option.
+- Info about users registered by default is provided by modal window.
 
 
 Deployment:
@@ -19,4 +21,4 @@ Coming soon in heroku.com
 
 Status:
 -------
-Starting
+Deployment
