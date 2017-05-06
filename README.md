@@ -3,22 +3,22 @@ This project goal is to develop a web app using Calendar module and consume data
 from an API REST.
 
 This project contain 3 branches for deployment: dep-heroku, dep-apache and dep-nginx, 
-all of these oriented to manage specific settings in order to deploy the project in 
-heroku.com, an Apache web server of its own and a Nginx web server of its own, respectively.
+all of these oriented to manage specific settings for deployment in heroku.com, 
+a personal Apache web server and a personal Nginx web server, respectively.
 
 
 Characteristics:
 ----------------
-- Presentation page with sections, which can be navigated by header menu.
+- Main page with sections, which can be accessed through header menu.
 - Login form in header, with Remember me option.
 - Info about users registered by default is provided by modal window.
 
 
 Deployment:
 -----------
-Coming soon in heroku.com
+Running version available here: [Task Manager in Heroku](http://task-llave.herokuapp.com/)
 
 
 Status:
 -------
-Deployment
+Development
