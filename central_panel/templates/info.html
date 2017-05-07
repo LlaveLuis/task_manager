@@ -19,44 +19,41 @@
          </button>
          <a class="navbar-brand" href="#">Task Manager</a>
       </div>
-      <!--<div class="navbar-nav navbar-right" style="padding-right: 2ch;">-->
-
-      <!--</div>-->
       <div class="collapse navbar-collapse" id="menu_app">
          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Info</a></li>
-            <li class="dropdown">
+            <li class="li-menu active"><a href="#">Info</a></li>
+            <li class="dropdown li-menu">
                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                      Tasks<span class="caret"></span>
                </a>
                <ul class="dropdown-menu">
-                  <li><a href="#">List</a></li>
-                  <li><a href="#">Create</a></li>
-                  <li><a href="#">Update</a></li>
+                  <li class="li-submenu"><a href="#">List</a></li>
+                  <li class="li-submenu"><a href="#">Create</a></li>
+                  <li class="li-submenu"><a href="#">Update</a></li>
                </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown li-menu">
                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                      Users<span class="caret"></span>
                </a>
                <ul class="dropdown-menu">
-                  <li><a href="#">List Users</a></li>
-                  <li><a href="#">Register User</a></li>
+                  <li class="li-submenu"><a href="#">List Users</a></li>
+                  <li class="li-submenu"><a href="#">Register User</a></li>
                </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown li-menu">
                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                      Settings<span class="caret"></span>
                </a>
                <ul class="dropdown-menu">
-                  <li><a href="#">Days Off</a></li>
+                  <li class="li-submenu"><a href="#">Days Off</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Configuration</a></li>
+                  <li class="li-submenu"><a href="#">Configuration</a></li>
                </ul>
             </li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
-            <li><a class="btn" id="btnLogout" href="{% url 'logout' %}">
+            <li class="li-menu"><a class="btn" id="btnLogout" href="{% url 'logout' %}">
                   Logout <span>&nbsp;</span><span
                   class="glyphicon glyphicon-log-out"></span>
                </a></li>
@@ -66,5 +63,6 @@
 <h1>Welcome {{ request.session.name }}</h1>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'central_panel/js/info.js' %}"></script>
 </body>
 </html>
