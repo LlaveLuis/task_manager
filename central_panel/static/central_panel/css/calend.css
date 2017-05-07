@@ -1,0 +1,6 @@
+th.month { text-align: center; font-size: larger; text-transform: uppercase; }
+td.day { text-align: right; background: #d9d9d9; padding: 8px;
+   border: 2px solid #FFFFFF; }
+td.today { text-align: right; background-color: #c580ff; padding: 8px;
+   border: 2px solid #FFFFFF; }
+a.no-link { text-decoration:none; }
